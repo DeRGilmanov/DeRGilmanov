@@ -1,0 +1,753 @@
+body {
+    /* Фон */
+    background-image: url(/img/Светло_Розовый.jpg);
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.0;
+    color: black;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: 100%; */
+    /* height: 100vh; */
+    /* background-size: cover;  */
+    margin: 120px 40px 0 40px;
+}
+
+.container {
+    width: 100%;
+    height: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+
+}
+
+.single-item {
+    margin-top: 30px;
+}
+
+.header {
+    width: 100%;
+    padding-top: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    background-image: url(/img/Светло_Розовый.jpg);
+
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+
+.header__logo {
+    margin: 0 auto;
+    margin-top: 0px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    border-width: 0px 0px 0px 3px;
+
+
+    transition: color .1s linear;
+}
+
+.header__logo:hover {
+    color: white;
+
+}
+
+.header_inner {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+/* nav */
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+    /* position: fixed;
+    background-image: url(/img/Светло_Розовый.jpg); */
+    margin-top: 20px;
+    margin: 0 0 25 25;
+    border-bottom: 1px solid black
+}
+
+
+.nav__link {
+
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 30px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.1s linear;
+    margin-bottom: 25px;
+    position: relative;
+
+
+}
+
+/* Стили для выпадающего меню */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    font-size: 15 px;
+    line-height: 2.0;
+    display: none;
+    position: absolute;
+    background-image: url(/img/Светло_Розовый.jpg);
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+    border-radius: 10px;
+    padding-right: 20px;
+
+
+}
+
+.dropdown-content-menu {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+
+}
+
+.dropdown-content-menu:hover {
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*   */
+
+
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+
+    background-color: white;
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity.1s linear;
+
+}
+
+.nav__link:hover {
+    color: white;
+}
+
+.nav__link:hover::after {
+    display: block;
+    opacity: 1;
+}
+
+/* Слайдер его тут нет, для пробы */
+img {
+    max-width: 100%;
+}
+
+/* .swiper{
+    width: 300px;
+    height: 100%;
+}
+.swiper-slide{
+    padding-top: 80px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+    right: 140px !important; 
+    left: auto;
+  }
+  .swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left: 140px !important; 
+    right: auto;
+  } */
+.text_under_the_slider {
+    font-family: "Oranienbaum", serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.6;
+    font-size: 20px
+}
+
+.text_under_the_slider h2 {
+    font-family: "Cormorant Unicase", serif;
+    line-height: 1.6;
+    font-size: 30px
+}
+
+.portfolio {
+    width: 100%;
+    height: 100%;
+}
+
+.me-porfolio {
+    font-family: "Cormorant Unicase", serif;
+    font-size: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.me-work {
+    text-align: center;
+    font-family: "Oranienbaum", serif;
+    font-size: 20px;
+}
+
+/* Портфолио */
+
+
+.circle-image {
+    margin-top: 30px;
+    margin-left: 40 px;
+    display: inline-block;
+    overflow: hidden;
+    width: 80%;
+    padding-bottom: 80%;
+    height: 0;
+   position: relative;
+
+}
+
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+
+}
+
+.model {
+    display: flex;
+    justify-content: space-between;
+}
+
+.model_item {
+    margin-top: 10px;
+    width: 50%;
+    position: relative;
+    /* padding-left: 20px; */
+    text-align: center;
+
+}
+
+.Look {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.1s linear;
+    position: relative;
+    text-align: center;
+}
+
+.Look:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+
+    background-color: white;
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity.1s linear;
+}
+
+.Look:hover {
+    color: white;
+}
+
+.Look:hover::after {
+
+    display: block;
+    opacity: 1;
+}
+
+.model_text {
+    font-size: 30px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    line-height: 1.6;
+
+}
+
+.text_individual {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+
+    margin: auto;
+    text-align: center;
+    line-height: 3.0;
+
+}
+
+.vopros-otvet {
+    display: flex;
+    margin-top: 350px;
+    width: 100%;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.vopros-otvet-item {
+
+    width: 50%;
+    padding-left: 45px;
+    padding-right: 45px;
+    background-image: url(/img/Темно_розовый.jpg);
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+
+}
+
+.section_foot {
+    margin-top: 50px;
+}
+
+.container2 {
+    width: 100%;
+    height: 100vh;
+}
+
+.container3 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+
+/* Взят готовый код с сайта */
+#faq {
+    max-width: 700px;
+    /* margin: auto; */
+    padding: 0 15px;
+    text-align: center;
+}
+
+section.faq {
+    padding-top: 2em;
+    padding-bottom: 3em;
+}
+
+#faq ul {
+    text-align: left;
+}
+
+.transition,
+p,
+ul li i:before,
+ul li i:after {
+    transition: all 0.3s;
+}
+
+#faq .no-select,
+#faq h2 {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
+#faq h1 {
+    color: #000;
+    font-family: "Noto Serif Display", serif;
+    font-weight: 100;
+    font-size: 35px;
+    margin-bottom: 13px;
+    margin-top: 0;
+}
+
+#faq h2 {
+    color: #131212;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    line-height: 34px;
+    text-align: left;
+    padding: 15px 15px 0;
+    text-transform: none;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: block;
+    margin: 0;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+#faq p {
+    color: #333;
+    text-align: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+    position: relative;
+    overflow: hidden;
+    max-height: 250px;
+    will-change: max-height;
+    contain: layout;
+    display: inline-block;
+    opacity: 1;
+    transform: translate(0, 0);
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 0 50px 0 15px;
+    transition: .3s opacity, .6s max-height;
+    hyphens: auto;
+    z-index: 2;
+}
+
+.ME {
+    margin-top: 20px;
+}
+
+#faq ul {
+    list-style: none;
+    perspective: 900;
+    padding: 0;
+    margin: 0;
+}
+
+#faq ul li {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 4px;
+    padding-top: 18px;
+    /* background-image: url(/img/Светло_Розовый.jpg); */
+    /* box-shadow: 0 3px 10px -2px rgba(249, 6, 6, 0.1); */
+    -webkit-tap-highlight-color: transparent;
+}
+
+#faq ul li+li {
+    margin-top: 15px;
+}
+
+#faq ul li:last-of-type {
+    padding-bottom: 0;
+}
+
+#faq ul li i {
+    position: absolute;
+    transform: translate(-6px, 0);
+    margin-top: 28px;
+    right: 15px;
+}
+
+#faq ul li i:before,
+ul li i:after {
+    content: "";
+    position: absolute;
+    background-color: #cc071e;
+    width: 3px;
+    height: 9px;
+}
+
+#faq ul li i:before {
+    transform: translate(-2px, 0) rotate(45deg);
+}
+
+#faq ul li i:after {
+    transform: translate(2px, 0) rotate(-45deg);
+}
+
+#faq ul li input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    touch-action: manipulation;
+}
+
+#faq ul li input[type=checkbox]:checked~h2 {
+    color: #000;
+}
+
+#faq ul li input[type=checkbox]:checked~p {
+    margin-top: 0;
+    max-height: 0;
+    transition: .3s;
+    opacity: 0;
+    /*transform: translate(0, 50%);*/
+}
+
+#faq ul li input[type=checkbox]:checked~i:before {
+    transform: translate(2px, 0) rotate(45deg);
+}
+
+#faq ul li input[type=checkbox]:checked~i:after {
+    transform: translate(-2px, 0) rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+e a,
+a:focus,
+a:active {
+    /* color: #cc071e; */
+    text-decoration: none;
+    outline: 0;
+}
+
+.link2 {
+    color: antiquewhite;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+}
+
+.link2:hover {
+    color: #cc071e;
+}
+
+/* a {
+    color: currentColor;
+    transition: .2s ease-in-out;
+  } */
+
+h1,
+h2,
+h3,
+h4 {
+    margin: .3em 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* img {
+    vertical-align: middle;
+    height: auto;
+    width: 100%;
+  } */
+/* Подвал */
+/* Стили для футера */
+footer {
+
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    margin-top: -70px;
+    padding-bottom: 50px;
+    font-size: 14px;
+    line-height: 1.7;
+
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Второя страница  с портфолио*/
+.text {
+    font-family: "Cormorant Unicase", serif;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.grid-container {
+  
+   margin: 50px 30px 50px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 10px;
+}
+
+.grid-item {
+    width: 100%;
+    border-radius: 10px;
+    width: 100%;
+}
+/* Третья страница с ценой */
+.text h2 {
+    font-size: 40px;
+}
+.container-price{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;   
+
+
+}
+.model-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.model_item-price {
+    margin-top: 10px;
+position: static;
+    width: 28%;
+    padding-left: 20px;
+    text-align: center;
+    display: inline-block;
+    
+
+}
+.model_text-price{
+    font-family: Georgia, Times, 'Times New Roman', serif;    margin-top: 20px;
+font-size: 25px;
+}
+.text_individual-price{
+    font-family: Georgia, Times, 'Times New Roman', serif;margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.text-price{
+    font-family: Georgia, Times, 'Times New Roman', serif;margin-top: 20px;
+    font-size: 15px;
+    margin-top: 20px;
+    line-height: 2.0;
+    text-align: justify;
+}
+.container-price2{
+    width: 100%;
+    height: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section-price{
+    height: 50vh;
+    margin-top: 50px;
+    width: 100%;
+    padding-left: 45px;
+    padding-right: 45px;
+display:inline-flex;
+    background-image: url(/img/Темно_розовый.jpg);
+    padding-top: 10px;
+    padding-bottom: 100px;
+  
+
+}
+.section-price h2{
+     padding-top: 20px;
+    font-size: 35px;
+    text-align: center;
+
+}
+.section-price p{
+    font-size: 15px;
+    text-align: center;
+    font-family: Georgia, Times, 'Times New Roman', serif;margin-top: 20px;
+
+}
+.section-price h3{
+    font-family: Georgia, Times, 'Times New Roman', serif;margin-top: 20px;
+   font-size: 25px;
+   text-align: center;
+
+}
+.containe-record {
+    display: flex;
+    justify-content: center; /* Выравнивание по центру по горизонтали */
+    align-items: center; /* Выравнивание по центру по вертикали */
+    height: 100vh; /* Высота контейнера равна 100% видимой области окна */
+    background-color: #050505; /* Цвет фона (чтобы было видно область центрирования) */
+  }
+
+  .record {
+    border-radius: 100px; /* Закругляем углы */
+    padding: 20px; /* Добавляем отступ внутри рамки */
+    text-align: center; /* Центрируем текст внутри рамки */
+  }
+  
+  .button-price{  
+    width: 50%;
+    padding: 17px 17px;
+    background-color: transparent; /* Прозрачный фон */
+    color: #111111; /* Цвет текста кнопки */
+    border: 1px solid #ffffff; /* Белая рамка */
+    border-radius: 100px; /* Закругленные углы */
+    cursor: pointer; /* Изменение формы указателя при наведении */  }
+    .button-price a{
+        text-decoration: none;
+        color: #000;
+        font-family: Georgia, Times, 'Times New Roman', serif;margin-top: 20px;
+
+    }
+    .button-price:hover{
+        background-image: url(/img/Светло_Розовый.jpg);
+    }
+    .footer-price{
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+    /* Четвертая вкладка Отзывы */
